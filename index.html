@@ -458,6 +458,7 @@
 
 <script>
     // Данные мероприятий
+    <script>
     const eventsData = [
         {
             type: 'Spanish Language Cafe',
@@ -471,17 +472,18 @@
             type: 'Canary Islands Short Film',
             link: 'film.html',
             days: ['Thursday'],
+            price: '5€',
             description: 'Explore Canarian culture through short films and discussions in simple Spanish.'
         },
         {
             type: 'Canarian Cooking Workshop',
             link: 'cooking.html',
             days: ['Friday'],
+            price: '25€',
             description: 'Cook traditional Canarian dishes like rabbit, chicken, octopus with professional chefs.'
         }
     ];
 
-    // Текущая неделя (например, первая неделя февраля 2026)
     const weekDays = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
     const weekDates = ['Feb 2','Feb 3','Feb 4','Feb 5','Feb 6','Feb 7','Feb 8'];
 
@@ -492,18 +494,25 @@
             if(event.days.includes(day)){
                 const card = document.createElement('div');
                 card.className = 'event-card';
+                card.onclick = () => window.location.href = event.link;
+                card.style.cursor = 'pointer';
+
                 card.innerHTML = `
                     <div class="event-date">${weekDates[index]} - ${day}</div>
-                    <div class="event-title"><a href="${event.link}" style="color:white;text-decoration:none;">${event.type}</a></div>
+                    <div class="event-title">${event.type}</div>
                     <div class="event-description">
-                        ${event.description} ${event.price ? 'Entry: ' + event.price : ''} ${event.level ? '| Level: ' + event.level : ''}
+                        ${event.description}
+                        ${event.price ? '<br><strong>Price:</strong> ' + event.price : ''}
+                        ${event.level ? ' | <strong>Level:</strong> ' + event.level : ''}
                     </div>
                 `;
+
                 eventsGrid.appendChild(card);
             }
         });
     });
 </script>
+
 
 
         <!-- Membership Section -->
