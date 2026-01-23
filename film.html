@@ -13,10 +13,10 @@ body {
     background-position: center;
     color: white;
     margin: 0;
-    padding-top: 80px; /* пространство под фиксированное меню */
+    padding-top: 70px; /* место для фиксированной полоски */
 }
 
-/* Fixed header */
+/* Fixed minimal header */
 header {
     position: fixed;
     top: 0;
@@ -26,7 +26,7 @@ header {
     backdrop-filter: blur(10px);
     padding: 15px 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     z-index: 1000;
     border-bottom: 1px solid rgba(255,255,255,0.2);
@@ -35,27 +35,13 @@ header {
 header .logo {
     font-size: 20px;
     font-weight: 600;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-header nav a {
+    cursor: pointer;
     color: white;
     text-decoration: none;
-    font-weight: 400;
-    font-size: 14px;
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: all 0.3s;
 }
 
-header nav a:hover {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(5px);
+header .logo span {
+    font-weight: 300;
 }
 
 /* Page content */
@@ -79,18 +65,9 @@ button:hover { background: #5ab0d1; }
 </head>
 <body>
 
-<!-- Fixed Header -->
+<!-- Fixed Minimal Header -->
 <header>
-    <div class="logo">ARONA <span style="font-weight:300;">Integration Club</span></div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#mission">Our Mission</a></li>
-            <li><a href="index.html#events">Events</a></li>
-            <li><a href="index.html#membership">Become a Member</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <a href="index.html" class="logo">ARONA <span>INTEGRATION CLUB</span></a>
 </header>
 
 <!-- Page Content -->
