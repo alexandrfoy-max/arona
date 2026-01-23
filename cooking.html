@@ -13,7 +13,33 @@ body {
     background-position: center;
     color: white;
     margin: 0;
+    padding-top: 70px;
 }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+header .logo span { font-weight: 300; }
+
 .container { max-width: 900px; margin: 0 auto; padding: 40px; }
 .card { background: rgba(255,255,255,0.08); border-radius:16px; padding:40px; }
 ul li { margin-bottom: 8px; }
@@ -34,17 +60,21 @@ button:hover { background: #5ab0d1; }
 </head>
 <body>
 
+<header>
+    <a href="index.html" class="logo">ARONA <span>INTEGRATION CLUB</span></a>
+</header>
+
 <div class="container">
 <div class="card">
 <h1>Canarian Cooking Workshop</h1>
 
-<p>Discover Canarian culture through cooking traditional dishes like rabbit, chicken, octopus, and more. All ingredients are included. Learn recipes you can recreate at home.</p>
+<p>Learn about Canary Islands culture through food and cooking. You’ll prepare dishes like rabbit, chicken, and octopus, and can repeat recipes at home. All ingredients included. Pre-booking required.</p>
 
 <ul>
 <li>📅 Fridays</li>
 <li>⏰ 17:00 – 20:00</li>
-<li>🎯 Level: All</li>
-<li>💰 25 € (pre-booking required)</li>
+<li>🎯 Level: All levels welcome</li>
+<li>💰 25 €</li>
 </ul>
 
 <h3>February Schedule</h3>
@@ -55,7 +85,7 @@ button:hover { background: #5ab0d1; }
 <li>28 Feb</li>
 </ul>
 
-<button onclick="window.location.href='mailto:hello@aronaintegrationclub.com?subject=Cooking%20Workshop%20Booking'">Book Your Spot</button>
+<button onclick="window.location.href='booking.html'">Reserve Your Spot</button>
 
 <p><a href="index.html">← Back to homepage</a></p>
 </div>
