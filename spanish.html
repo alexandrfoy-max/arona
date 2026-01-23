@@ -13,7 +13,33 @@ body {
     background-position: center;
     color: white;
     margin: 0;
+    padding-top: 70px;
 }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+header .logo span { font-weight: 300; }
+
 .container { max-width: 900px; margin: 0 auto; padding: 40px; }
 .card { background: rgba(255,255,255,0.08); border-radius:16px; padding:40px; }
 ul li { margin-bottom: 8px; }
@@ -23,11 +49,15 @@ a:hover { text-decoration: underline; }
 </head>
 <body>
 
+<header>
+    <a href="index.html" class="logo">ARONA <span>INTEGRATION CLUB</span></a>
+</header>
+
 <div class="container">
 <div class="card">
 <h1>Spanish Language Cafe</h1>
 
-<p>Practice your Spanish with a tutor using simple prepared materials. Coffee, tea, and light snacks are included. Perfect for learners with A2+ level.</p>
+<p>Practice your Spanish with a tutor using simple learning materials. Coffee, tea, and light snacks are included. Suitable for level A2 and above.</p>
 
 <ul>
 <li>📅 Mondays & Wednesdays</li>
@@ -38,14 +68,14 @@ a:hover { text-decoration: underline; }
 
 <h3>February Schedule</h3>
 <ul>
-<li>3 Feb (Mon)</li>
-<li>5 Feb (Wed)</li>
-<li>10 Feb (Mon)</li>
-<li>12 Feb (Wed)</li>
-<li>17 Feb (Mon)</li>
-<li>19 Feb (Wed)</li>
-<li>24 Feb (Mon)</li>
-<li>26 Feb (Wed)</li>
+<li>3 Feb</li>
+<li>5 Feb</li>
+<li>10 Feb</li>
+<li>12 Feb</li>
+<li>17 Feb</li>
+<li>19 Feb</li>
+<li>24 Feb</li>
+<li>26 Feb</li>
 </ul>
 
 <p><a href="index.html">← Back to homepage</a></p>
