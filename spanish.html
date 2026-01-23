@@ -1,113 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Event – Arona Integration Club</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spanish Language Cafe</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body {
+    font-family: Inter, sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('banner.jpg') fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin: 0;
+}
+.container { max-width: 900px; margin: 0 auto; padding: 40px; }
+.card { background: rgba(255,255,255,0.08); border-radius:16px; padding:40px; }
+ul li { margin-bottom: 8px; }
+a { color: #7fd3ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+</style>
 </head>
 <body>
 
-<header class="hero">
-  <div class="overlay">
-    <h1 id="event-title"></h1>
-    <p id="event-subtitle"></p>
-  </div>
-</header>
+<div class="container">
+<div class="card">
+<h1>Spanish Language Cafe</h1>
 
-<section class="event-page">
-  <div class="event-description" id="event-description"></div>
+<p>Practice your Spanish with a tutor using simple prepared materials. Coffee, tea, and light snacks are included. Perfect for learners with A2+ level.</p>
 
-  <h2>Schedule — February 2026</h2>
-  <div class="events-grid" id="event-schedule"></div>
-</section>
+<ul>
+<li>📅 Mondays & Wednesdays</li>
+<li>⏰ 17:00 – 19:00</li>
+<li>🎯 Level: A2+</li>
+<li>💰 10 €</li>
+</ul>
 
-<footer>
-  <p>© 2026 Arona Integration Club</p>
-</footer>
+<h3>February Schedule</h3>
+<ul>
+<li>3 Feb (Mon)</li>
+<li>5 Feb (Wed)</li>
+<li>10 Feb (Mon)</li>
+<li>12 Feb (Wed)</li>
+<li>17 Feb (Mon)</li>
+<li>19 Feb (Wed)</li>
+<li>24 Feb (Mon)</li>
+<li>26 Feb (Wed)</li>
+</ul>
 
-<script>
-const eventData = {
-  spanish: {
-    title: "Spanish Language Cafe",
-    subtitle: "Practice Spanish in a friendly and supportive environment",
-    description: `
-      <p>Special language cafes where you practice Spanish with prepared materials and a tutor.</p>
-      <p><strong>Minimum level:</strong> A2</p>
-      <p><strong>Days:</strong> Monday & Wednesday</p>
-      <p><strong>Price:</strong> 10€</p>
-    `,
-    dates: [
-      "2026-02-02",
-      "2026-02-04",
-      "2026-02-09",
-      "2026-02-11",
-      "2026-02-16",
-      "2026-02-18",
-      "2026-02-23",
-      "2026-02-25"
-    ],
-    time: "18:00 - 20:00",
-    price: "10€"
-  },
-
-  film: {
-    title: "Canary Islands Short Film",
-    subtitle: "Discover local culture through cinema and discussion",
-    description: `
-      <p>We explore Canarian culture through short films and guided discussions in simple Spanish.</p>
-      <p><strong>Day:</strong> Thursday</p>
-      <p><strong>Language level:</strong> A2+</p>
-    `,
-    dates: [
-      "2026-02-05",
-      "2026-02-12",
-      "2026-02-19",
-      "2026-02-26"
-    ],
-    time: "19:00 - 21:00",
-    price: "Free"
-  },
-
-  cooking: {
-    title: "Canarian Cooking Workshop",
-    subtitle: "Cook together with professional chefs",
-    description: `
-      <p>Hands-on cooking workshops where we prepare traditional Canarian dishes.</p>
-      <p>Rabbit, chicken, octopus and more.</p>
-      <p><strong>Day:</strong> Friday</p>
-    `,
-    dates: [
-      "2026-02-06",
-      "2026-02-13",
-      "2026-02-20",
-      "2026-02-27"
-    ],
-    time: "18:00 - 21:00",
-    price: "20€"
-  }
-};
-
-const type = window.location.pathname.split('/').pop().split('.')[0];
-const data = eventData[type];
-
-document.getElementById("event-title").innerText = data.title;
-document.getElementById("event-subtitle").innerText = data.subtitle;
-document.getElementById("event-description").innerHTML = data.description;
-
-const container = document.getElementById("event-schedule");
-
-data.dates.forEach(date => {
-  const card = document.createElement("div");
-  card.className = "event-card";
-  card.innerHTML = `
-    <h3>${new Date(date).toLocaleDateString("en-GB")}</h3>
-    <p>${data.time}</p>
-    <p>${data.price}</p>
-  `;
-  container.appendChild(card);
-});
-</script>
+<p><a href="index.html">← Back to homepage</a></p>
+</div>
+</div>
 
 </body>
 </html>
